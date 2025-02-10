@@ -5,4 +5,4 @@ export const apiService = createApi({
   endpoints: (builder) => ({}),
 });
 
-export const { useSendOtpMutation, useVerifyOtpQuery } = apiService;
+export const {} = apiService;
