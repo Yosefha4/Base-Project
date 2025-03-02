@@ -5,11 +5,15 @@ import { Provider } from "react-redux";
 import store from "./store/index.js";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router.jsx";
+import { ThemeProvider } from "@emotion/react";
+import { theme } from "./theme.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </Provider>
   </StrictMode>
 );
